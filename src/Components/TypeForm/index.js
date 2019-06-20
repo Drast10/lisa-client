@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+<<<<<<< Updated upstream
 import { getAllTypes } from '../../actions/types'
 
+=======
+import { createType } from '../../actions/types'
+>>>>>>> Stashed changes
 import TypeForm from './TypeForm'
 
 
@@ -11,7 +15,6 @@ export class TypeFormContainer extends Component {
   }
 
   componentDidMount = () => {
-    this.props.getAllTypes()
   }
 
   onChange = (event) => {
@@ -50,8 +53,16 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+<<<<<<< Updated upstream
     getAllTypes: dispatch => getAllTypes()
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TypeFormContainer)
+=======
+    createType: createType
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps )(TypeFormContainer)
+>>>>>>> Stashed changes
